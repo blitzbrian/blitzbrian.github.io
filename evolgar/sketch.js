@@ -15,7 +15,7 @@ var images = {};
 var blocks = [[[]]];
 var players = [];
 var map;
-var socket = io('https://evolgar-server.glitch.me');
+var socket = io('https://evolgar.servers.baliomaker.ga');
 
 //Disable friendly errors:
 
