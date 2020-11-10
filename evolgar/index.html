@@ -6,7 +6,7 @@
 </head>
 <body>
   <script>
-  let socket = io('https://evolgar-server.glitch.me');
+  let socket = io('https://evolgar-server.glitch.me',{reconnect: true});
   socket.on('connect', function () {
     console.log('Connected')
   });
