@@ -1,20 +1,21 @@
-<!doctype HTML>
-<html>
-<head>
-<title>Evolgar</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-</head>
-<body>
-  <script>
-  let socket = io('https://evolgar-server.glitch.me',{reconnect: true});
-  socket.on('connect', function () {
-    console.log('Connected')
-  });
-    
-  socket.on('disconnect', function () {
-    console.log('Disconnected');
-  });
-  </script>
-<h1>Test</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/fe6dcd2a-d73f-4931-8c94-255bc9341228%2F4a321c1d-ae15-4252-9b4b-85fbe8f7c187.image.png?v=1600521258119"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Evolgar</title>
+  </head>
+  <body>
+    <div id="p5_loading" class="loadingclass"><img src="https://cdn.glitch.com/fe6dcd2a-d73f-4931-8c94-255bc9341228%2F5346c842-543f-4134-adf8-e0859ee2b7d2.image.png?v=1600521312410"/></div>
+    <script src="sketch.js"></script>
+  </body>
 </html>
+
