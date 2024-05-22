@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="blitzbrian">
+    <meta name="description" content="Hey, it's me, blitzbrian.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://blitzbrian.is-a.dev">
+    <meta name="twitter:title" content="blitzbrian">
+    <meta name="twitter:description" content="Hey, it's me, blitzbrian.">
+    <meta name="twitter:image" content="https://blitzbrian.is-a.dev/pfp.png">
+    <meta name="twitter:creator" content="@blitzbrian">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="blitzbrian">
+    <meta property="og:description" content="Hey, it's me, blitzbrian.">
+    <meta property="og:site_name" content="blitzbrian">
+    <meta property="og:url" content="https://blitzbrian.is-a.dev">
+    <meta property="og:image" content="https://blitzbrian.is-a.dev">
+    <meta http-equiv="content-language" content="en">
+    <title>blitzbrian</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primevue/3.52.0/resources/themes/lara-dark-green/theme.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">                                         
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.27/vue.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/primevue/3.52.0/core/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/primevue/3.52.0/animateonscroll/animateonscroll.min.js"></script>
+
+    <style>
+        #app { 
+            text-align: center;
+        }
+
+        #navbar {
+          width: 100%;
+          display: flex;
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 3em;
+          align-items: center;
+        }
+
+        #navbar a {
+          color: white;
+          margin: 1em;
+        }
+
+        #navbar :first-child {
+          margin-left: auto;
+        }
+
+        .m {
+            margin-top: 15em
+        }
+        .sm {
+          margin-top: 7.5em;
+        }
+
+        .xm {
+          margin-top: 2.5em;
+        }
+
+        .link {
+          margin: 2em
+        }
+
+        div {
+          margin: 0;
+          padding: 0;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+    </style>
+
+      
+    <div id="app">
+        <div id="navbar">
+          <a href="#intro">Intro</a>
+          <a href="#about-me">About Me</a>
+          <a href="#coding">Coding</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div v-animateonscroll="fade">
+          <h1 class="xm">blitzbrian</h1>
+          <img alt="pfp" style="border-radius: 50%;" class="xm" src="pfp.png" />
+          <br>
+          <br>
+          <a class="link" href="mailto:blitzbrianx@gmail.com" target="_blank">
+            <img height="50" width="50" src="mail.svg" />
+          </a>
+          <a class="link" href="https://discord.com/users/814555302178455604" target="_blank">
+            <img height="50" width="50" src="discord.svg" />
+          </a>
+          <a class="link" href="https://github.com/blitzbrian" target="_blank">
+            <img height="50" width="50" src="github.svg" />
+          </a>
+        </div>
+        <div id="intro" v-animateonscroll="fade">
+          <h2 class="sm">Hey, it's me, Brian</h2>
+          <p>I'm a developer that specializes in web development and server development.</p>
+          <p>In addition I also create game modifications and utility software.</p>
+          <br>
+          <p>Pronouns: He/him</p>
+          <p>Location: South-Holland</p>
+          <p>Timezone: UTC +02:00 (Amsterdam)</p>
+        </div>
+        <div id="about-me" v-animateonscroll="fade">
+          <h2 class="m">About Me</h2>
+            <h3>Open source contributions</h3>
+              <p>shimboot</p>
+              <p>lilac</p>
+            <br>
+            <h3>Favorite OSses</h3>
+              <p>Arch Linux</p>
+              <p>Windows 11</p>
+              <p>Android</p>
+            <br>
+            <h3>Tools</h3>
+              <p>VSCode</p>
+        </div>
+        <div id="coding" v-animateonscroll="fade">
+          <h2 class="m">Coding</h2>
+            <h3>Languages</h3>
+              <p>Javascript</p>
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>PHP</p>
+              <p>Python</p>
+              <p>Java</p>
+              <p>C</p>
+              <p>Go</p>
+            <br>
+            <h3>Frameworks</h3>
+              <p>NextJS</p>
+              <p>VueJS</p>
+              <p>ReactJS</p>
+              <p>ExpressJS</p>
+            <br>
+            <h3>Technologies</h3>
+              <p>Git</p>
+              <p>Rest APIs</p>
+              <p>Linux</p>
+              <p>Cloud</p>
+              <p>NodeJS</p>
+        </div>
+        <div id="projects" v-animateonscroll="fade">
+          <h2 class="m">Projects</h2>
+            <h3>Hoogeland</h3>
+            <h3>viaclient</h3>
+        </div>
+        <div v-animateonscroll="fade">
+          <p class="m">Made with <span style="color: red;">❤</span> by <b>blitzbrian</b>.</p>
+          <p>Credits to <b>c0mp0op3r</b> for the pfp.</p>
+        </div>
+        
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        setup() {
+          return {
+            fade: { enterClass: 'fadein animation-duration-500', leaveClass: 'fadeout' }
+          }
+        }
+      });
+
+      app.use(primevue.config.default);
+      
+      app.directive('animateonscroll', primevue.animateonscroll);
+
+      app.mount('#app');
+    </script>
+  </body>
+</html>
